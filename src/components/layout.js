@@ -1,15 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
+import styled from 'styled-components'
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import '../styles/reset.min.css'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -23,30 +18,51 @@ const Layout = ({ children }) => {
     }
   `)
 
+
+  /*
+  React.useEffect(() =>{
+      // cursor
+      const cursor = document.getElementById("cursor-elm")
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.pageX - 5 + "px"
+        cursor.style.top = e.pageY - 5 + "px"
+      })
+  }, [])
+  */
+
   return (
     <>
+      <StyledCursor id="cursor-elm" />
+
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
+
+      <main>{children}</main>
+      <footer
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          marginTop: `2rem`,
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
+
     </>
   )
 }
+
+const StyledCursor = styled.div(props => `
+  background: #333;
+  border-radius: 50%;
+  display: none;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 10px;
+  z-index: 10000;
+`)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
