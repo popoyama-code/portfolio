@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import FlipIcon from '../../images/flip-icon.svg'
 
 const DoubleSidedCard = ({children, ...props}) => {
   const [isBackside, setIsBackside] = useState(false)

@@ -6,11 +6,11 @@ tag:
   - React
   - StyledComponent
   - AtomicDesign
-  - Illustrator
+  - Illustrator(Icon)
   - Responsive
 link: https://app.popos.work/minesweeper/
 github: https://github.com/popoyama-code/react-minesweeper
-description: 説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明説明、説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明。
+description: Reactのコンポーネント設計を学習するために制作したブラウザゲームです。ゲームロジック、ステートとViewコンポーネントを分離することで、変更しやすい作りにすることが出来ました。
 ---
 
-![スクリーンショット](./screenshot1.png)
+![スクリーンショット](./ss1.png)

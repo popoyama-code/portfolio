@@ -18,7 +18,7 @@ const theme_color = {
 // 汎用フォント設定
 const font = {
   SIZE_S: "1.5rem",
-  SIZE_M: "3rem",
+  SIZE_M: "2rem",
   SIZE_L: "5rem",
 }
 

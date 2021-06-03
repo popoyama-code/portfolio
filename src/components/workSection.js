@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from 'styled-components'
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Heading from '../components/shared/heading'
 import Section from '../components/shared/section'
 import DoubleSidedCard from "../components/shared/doublesided-card"
@@ -43,8 +43,8 @@ const WorkSection = ({children}) => {
           <DoubleSidedCard frontButton="スクリーンショット" backButton={node.frontmatter.title}>
             <StyledCardDataWrap>
               <StyledCardLink>
-                <li onClick={(e) => e.stopPropagation()}><Link to={node.frontmatter.link}><StyledIcon src={PlayIcon}/></Link></li>
-                <li onClick={(e) => e.stopPropagation()}><Link to={node.frontmatter.link}><StyledIcon src={GitHubIcon}/></Link></li>
+                <li onClick={(e) => e.stopPropagation()}><a rel="noopener noreferrer" href={node.frontmatter.link} target="_blank"><StyledIcon src={PlayIcon}/></a></li>
+                <li onClick={(e) => e.stopPropagation()}><a rel="noopener noreferrer" href={node.frontmatter.github} target="_blank"><StyledIcon src={GitHubIcon}/></a></li>
               </StyledCardLink>
               <StyledCardData>
                 <div>タイトル</div>
@@ -70,9 +70,9 @@ const WorkSection = ({children}) => {
   })
 
   return (
-    <Section background="#f7f9f9" padding="5rem 0" margin="10% auto" skew={true}>
+    <Section background="#f7f9f9" padding="10rem 0" margin="10% auto" skew={true}>
       <StyledWorkWrap>
-        <Heading>MY WORK</Heading>
+        <Heading margin="-3rem 0 0 0">MY WORK</Heading>
         <StyledWorkList>
           {items}
         </StyledWorkList>

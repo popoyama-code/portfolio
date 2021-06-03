@@ -32,9 +32,9 @@ const Header = ({ siteTitle }) => {
       <StyledNavi>
         <StyledNaviList>
           <StyledNaviItem>
-            <Link to="https://github.com/popoyama-code" >
+            <a rel="noopener noreferrer" href="https://github.com/popoyama-code" target="_blank">
               <StyledIcon src={GitHubIcon} />
-            </Link>
+            </a>
           </StyledNaviItem>
         </StyledNaviList>
       </StyledNavi>

@@ -1,15 +1,17 @@
 ---
 id: 4
-title: PORTFOLIO
+title: Portfolio
 tag:
+  - JavaScript
   - React
+  - Gatsby
   - StyledComponent
-  - TypeScript
-  - AtomicDesign
-  - Responsive
-link: https://popos.work
+  - GSAP
+  - GraphQL
+  - Netlify
+link: https://portfolio.popos.work
 github: https://github.com/popoyama-code/portfolio
-description: 説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明説明、説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明。
+description: このポートフォリオサイトです。Jamstackサイトの習作もかねてGatbyを使用しました。
 ---
 
-![スクリーンショット](./screenshot4.png)
+![スクリーンショット](./ss4.png)

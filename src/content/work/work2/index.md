@@ -6,10 +6,10 @@ tag:
   - React
   - StyledComponent
   - AtomicDesign
-  - Illustrator
+  - Illustrator(Icon)
 link: https://app.popos.work/deduplicator/
 github: https://github.com/popoyama-code/react-deduplicator
-description: 説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明説明、説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明。
+description: 入力テキストの重複部分を削除するシンプルなツールです。UIに細かいアニメをつけたり、ニューモーフィズムを取り入れるなど、見た目にこだわりました。
 ---
 
-![スクリーンショット](./screenshot2.png)
+![スクリーンショット](./ss2.png)

@@ -7,11 +7,11 @@ tag:
   - jQuery
   - SCSS
   - BEM
-  - Illustrator
+  - Illustrator(Logo)
   - Responsive
 link: https://popos.work/wp-theme/
 github: https://github.com/popoyama-code/wp-theme
-description: 説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明説明、説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明。説明説明説明説明説明説明。
+description: 自身のサイト用に制作したテーマです。作ってはみたものの、Jamstackのパフォーマンスと安全性の魅力に抗えず、静的サイトジェネレーターで再構築中です…。
 ---
 
-![スクリーンショット](./screenshot3.png)
+![スクリーンショット](./ss3.png)

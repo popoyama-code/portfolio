@@ -9,7 +9,7 @@ const AboutSection = ({children}) => {
   return (
     <Section padding="5rem 0">
       <StyledAboutWrap>
-        <Heading margin="0 0 5rem">ABOUT</Heading>
+        <Heading margin="0 0 3rem">ABOUT</Heading>
         <StyledText className="gs_reveal">
           首都圏の開発会社に勤めるWebエンジニアです。主にECサイトやWordPressサイトの受託開発に携わっています。<br />
           フロントエンド、バックエンド、サーバーサイドまで幅広い業務を担当。Web開発を通じて、お客様や、開発メンバー、<br />
@@ -18,13 +18,13 @@ const AboutSection = ({children}) => {
         <StyledText className="gs_reveal">
           スキル<br />
           HTML/CSS/Sass/SCSS/StyledComponents/BEM/AtomicDesign/GSAP/Javascript/React.js/Gatsby/jQuery/PHP/MySQL/WordPress/<br />
-          Laravel/Ethna/
+          Laravel/Ethna
         </StyledText>
         <StyledText className="gs_reveal">
           開発環境<br />
           VS Code/PHP Storm/Photoshop/Illustrator/<br />
           Git/Node.js/Gulp/Docker/Apache/FTP/Ubuntu/CentOS/Windows/MacOS/<br />
-          Slack/Zoom/
+          Slack/Zoom/Backlog
         </StyledText>
       </StyledAboutWrap>
     </Section>
@@ -38,7 +38,7 @@ const StyledAboutWrap = styled.div(props => `
 
 const StyledText = styled.p(props => `
   font-size: ${properties.FONT.SIZE_S};
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `)
 
  export default AboutSection
