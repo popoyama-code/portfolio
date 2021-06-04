@@ -1,13 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import styled from 'styled-components' 
 import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import properties from "../components/_settings/_properties"
-
-import GitHubIcon from "../images/GitHub-Mark.svg"
+import GitHubIcon from "../../images/GitHub-Mark.svg"
 
 const Header = ({ siteTitle }) => {
   React.useEffect(() => {

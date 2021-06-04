@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import '../styles/reset.min.css'
-import "./layout.css"
+import '../../styles/reset.min.css'
+import '../../styles/layout.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,7 +17,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
 
   /*
   React.useEffect(() =>{
@@ -37,15 +36,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
       <main>{children}</main>
-      <footer
-        style={{
-          marginTop: `2rem`,
-        }}
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
 
     </>
   )

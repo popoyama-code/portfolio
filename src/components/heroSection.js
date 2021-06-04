@@ -17,7 +17,10 @@ const HeroSection = ({children, ...props}) => {
         </StyledHeadingWrap>
       </StyledHeroWrap>
       <StyledArrowWrap>
-          <StyledArrowImage src={ArrowImg} />
+        <StyledSGuideSign>
+          <p>SCROLL</p>
+          <img src={ArrowImg} />
+        </StyledSGuideSign>
       </StyledArrowWrap>
     </StyledHeroSection>
   )
@@ -77,14 +80,17 @@ const StyledArrowWrap = styled.div(props => `
   width: 100%;
 `)
 
-const StyledArrowImage = styled.img(props => `
+const StyledSGuideSign = styled.div(props => `
   animation: move .7s;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  width: 3.5rem;
-  height: 3.5rem;
-
+  font-size: ${properties.FONT.SIZE_S};
+  img {
+    margin: 0 auto;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
   @keyframes move {
     from { transform: translateY(-0.5rem); }
     to { transform: translateY(.5rem); }
