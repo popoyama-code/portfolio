@@ -31,7 +31,6 @@ const WorkSection = ({children}) => {
   `)
   const items = markdown.allMarkdownRemark.edges.map(({node}, index) => {
     let wrapperClass = "gs_reveal"
-    console.log(node.frontmatter.tag)
     if (index % 2 === 0) {
       wrapperClass += " gs_reveal_fromRight";
     } else {
@@ -40,11 +39,11 @@ const WorkSection = ({children}) => {
     return (
       <StyledWorkItem key={index}>
         <div className={wrapperClass}>
-          <DoubleSidedCard frontButton="スクリーンショット" backButton={node.frontmatter.title}>
+          <DoubleSidedCard>
             <StyledCardDataWrap>
               <StyledCardLink>
-                <li onClick={(e) => e.stopPropagation()}><a rel="noopener noreferrer" href={node.frontmatter.link} target="_blank"><StyledIcon src={PlayIcon}/></a></li>
-                <li onClick={(e) => e.stopPropagation()}><a rel="noopener noreferrer" href={node.frontmatter.github} target="_blank"><StyledIcon src={GitHubIcon}/></a></li>
+                <li><a rel="noopener noreferrer" href={node.frontmatter.link} target="_blank" onClick={(e) => e.stopPropagation()}><StyledIcon src={PlayIcon} alt="デモ"/></a></li>
+                <li><a rel="noopener noreferrer" href={node.frontmatter.github} target="_blank" onClick={(e) => e.stopPropagation()}><StyledIcon src={GitHubIcon} alt="GitHub"/></a></li>
               </StyledCardLink>
               <StyledCardData>
                 <div>タイトル</div>
@@ -70,9 +69,9 @@ const WorkSection = ({children}) => {
   })
 
   return (
-    <Section background="#f7f9f9" padding="10rem 0" margin="10% auto" skew={true}>
+    <Section background="#f7f9f9" margin="10% auto" skew={true}>
       <StyledWorkWrap>
-        <Heading margin="-3rem 0 0 0">MY WORK</Heading>
+        <StyledHeadingWrap><Heading level={2}>MY WORK</Heading></StyledHeadingWrap>
         <StyledWorkList>
           {items}
         </StyledWorkList>
@@ -84,12 +83,27 @@ const WorkSection = ({children}) => {
 const StyledWorkWrap = styled.div(props => `
   margin: 0 auto;
   max-width: 1080px;
-  padding-bottom: 5rem;
+  padding: 5rem 0;
   position: relative;
   h1 {
     left: 0;
     position: absolute;
     top: 0;
+  }
+`)
+
+const StyledHeadingWrap = styled.div(props => `
+  position: relative;
+  h1 {
+    position: relative;
+    margin: 0 0 3rem;
+  }
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    h1 {
+      left: 0; top: -3rem;
+      margin: 0;
+      position: absolute;
+    }
   }
 `)
 
@@ -103,10 +117,14 @@ const StyledWorkItem = styled.li(props => `
   height: auto;
   list-style: none;
   margin: 0;
-  padding: 1rem;
-  width: 50%;
-  &:nth-child(even) {
-    transform: translateY(5rem);
+  padding: 1rem 0;
+  width: 100%;
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    padding: 1rem;
+    width: 50%;
+    &:nth-child(even) {
+      transform: translateY(5rem);
+    }
   }
 `)
 
@@ -130,18 +148,24 @@ const StyledCardThumbnailCaption = styled.div(props => `
 `)
 
 const StyledCardDataWrap = styled.div(props => `
-  padding: 5rem;
+  padding: 1rem;
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    padding: 5rem;
+  }
 `)
 const StyledCardLink = styled.ul(props => `
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   width: 100%;
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    margin-bottom: 3rem;
+  }
 `)
 const StyledCardData = styled.div(props => `
   display: flex;
-  font-size: ${properties.FONT.SIZE_S};
+  font-size: 1.3rem;
   justify-content: space-between;
   margin-bottom: 2rem;
   width: 100%;
@@ -151,6 +175,9 @@ const StyledCardData = styled.div(props => `
 
   div:nth-child(2) {
     width: 70%;
+  }
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    font-size: ${properties.FONT.SIZE_S};
   }
 `)
 

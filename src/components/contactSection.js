@@ -3,59 +3,68 @@ import styled from 'styled-components'
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 
 import Heading from './shared/heading'
+import LetterImage from '../components/shared/letterImage'
+import Section from '../components/shared/section'
 
 import properties from './_settings/_properties'
 
 const ContactSection = ({children, ...props}) => {
   return (
-    <StyledContactSection>
-      <StyledContactContent>
-        <Heading margin="0 0 3rem 0">CONTACT</Heading>
-        <p>ご連絡をお待ちしております。</p>
-      </StyledContactContent>
-      <StyledContactContent>
-        <NetlifyForm name='contact' honeypotName='bot-field'>
-          {({ handleChange, success, error }) => (
-            <>
-              <Honeypot />
-              <StyledInputWrap>
-                <StyledLabel htmlFor='name'>お名前</StyledLabel>
-                <StyledTextbox type='text' name='name' id='name' onChange={handleChange} required />
-              </StyledInputWrap>
-              <StyledInputWrap>
-                <StyledLabel htmlFor='email'>ご連絡先メールアドレス</StyledLabel>
-                <StyledTextbox type='email' name='email' id='email' onChange={handleChange} required />
-              </StyledInputWrap>
-              <StyledInputWrap>
-                <StyledLabel htmlFor='message'>本文</StyledLabel>
-                <StyledTextarea
-                  type='text'
-                  name='message'
-                  id='message'
-                  rows='5'
-                  onChange={handleChange}
-                  required
-                />
-              </StyledInputWrap>
-              <div>
-                <StyledButton type='submit'>送信</StyledButton>
-              </div>
-              {success && <p>サーバーに送信しました。</p>}
-              {error && (
-                <p>サーバーに送信出来ませんでした。お手数ですが、また後ほどお試しください。</p>
-              )}
-            </>
-          )}
-        </NetlifyForm>
-      </StyledContactContent>
-    </StyledContactSection>
+    <Section>
+      <StyledContactWrap>
+        <StyledContactContent>
+          <Heading level={2} margin="0 0 3rem">CONTACT</Heading>
+          <StyledText>ご連絡をお待ちしております。</StyledText>
+          <LetterImage styleHeight="auto" styleWidth="50%" />
+        </StyledContactContent>
+        <StyledContactContent>
+          <NetlifyForm name='contact' honeypotName='bot-field'>
+            {({ handleChange, success, error }) => (
+              <>
+                <Honeypot />
+                <StyledInputWrap>
+                  <StyledLabel htmlFor='name'>お名前</StyledLabel>
+                  <StyledTextbox type='text' name='name' id='name' onChange={handleChange} required />
+                </StyledInputWrap>
+                <StyledInputWrap>
+                  <StyledLabel htmlFor='email'>ご連絡先メールアドレス</StyledLabel>
+                  <StyledTextbox type='email' name='email' id='email' onChange={handleChange} required />
+                </StyledInputWrap>
+                <StyledInputWrap>
+                  <StyledLabel htmlFor='message'>本文</StyledLabel>
+                  <StyledTextarea
+                    type='text'
+                    name='message'
+                    id='message'
+                    rows='5'
+                    onChange={handleChange}
+                    required
+                  />
+                </StyledInputWrap>
+                <div>
+                  <StyledButton type='submit'>送信</StyledButton>
+                </div>
+                {success && <p>サーバーに送信しました。</p>}
+                {error && (
+                  <p>サーバーに送信出来ませんでした。お手数ですが、また後ほどお試しください。</p>
+                )}
+              </>
+            )}
+          </NetlifyForm>
+        </StyledContactContent>
+      </StyledContactWrap>
+    </Section>
   )
 }
  
-const StyledContactSection = styled.section(props => `
+const StyledContactWrap = styled.div(props => `
   display: flex;
-  margin: 10rem auto;
+  flex-direction: column;
+  margin: 0 auto;
   max-width: 1080px;
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    flex-direction: row;
+  }
 `)
 
 const StyledContactContent = styled.div(props => `
@@ -66,6 +75,10 @@ const StyledContactContent = styled.div(props => `
 const StyledLabel = styled.label(props => `
   display: block;
   margin-bottom: .5rem;
+`)
+
+const StyledText = styled.p(props => `
+  margin-bottom: 3rem;
 `)
 
 const StyledTextbox = styled.input(props => `
@@ -99,8 +112,12 @@ const StyledButton = styled.button(props => `
   border: none;
   color: ${properties.COLOR.WHITE};
   cursor: pointer;
-  font-size: ${properties.FONT.SIZE_M};
+  font-size: ${properties.FONT.SIZE_S};
   padding: 1rem 3rem;
+  transition: all .3s;
+  :hover {
+    background-color: #72A7E9;
+  }
 `)
 
 export default ContactSection

@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => {
           </StyledNaviItem>
         </StyledNaviList>
       </StyledNavi>
-</StyledHeader>
+    </StyledHeader>
   )
 }
 
@@ -71,8 +71,8 @@ const StyledNaviItem = styled.li(props => `
 `)
 
 const StyledIcon = styled.img(props => `
-  width: 100%;
-  height: auto;
+  width: 8rem;
+  height: 8rem;
   padding: 20%;
   margin: 0 auto;
 `)

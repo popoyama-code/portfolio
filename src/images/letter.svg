@@ -1,0 +1,19 @@
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 595.28 841.89" style="enable-background:new 0 0 595.28 841.89;" xml:space="preserve" width="595.280029296875" height="841.8900146484375">
+  <style type="text/css">
+    .st0{fill:#75ADDE;}
+    .st1{fill:none;stroke:#41416E;stroke-width:3;stroke-miterlimit:10;}
+    .st2{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+    .st3{fill:#FFFFFF;stroke:#41416E;stroke-width:3;stroke-miterlimit:10;}
+    .st4{fill:none;stroke:#7870A2;stroke-width:3;stroke-miterlimit:10;}
+  </style>
+  <polygon class="st0 svg-elem-1" points="252.37,333.52 213.04,344.06 168.15,413.23 241.61,450.7 280.94,440.16 327.72,370.48 "></polygon>
+  <polygon class="st1 svg-elem-2" points="355.81,477.5 195.75,520.39 168.15,413.49 328.21,370.6 "></polygon>
+  <path class="st1 svg-elem-3" d="M168.15,413.49l73.46,37.47l-45.86,69.43"></path>
+  <path class="st1 svg-elem-4" d="M355.37,477.62l-74.43-37.2l44.89-69.17"></path>
+  <line class="st2 svg-elem-5" x1="241.61" y1="450.95" x2="280.94" y2="440.42"></line>
+  <polygon class="st3 svg-elem-6" points="280.94,440.42 241.61,450.95 196.2,427.79 179.95,367.17 292.45,337.03 308.69,397.65 "></polygon>
+  <path class="st4 svg-elem-7" d="M242.09,374.06l-42.13,11.29 M204.86,403.65l84.26-22.57 M209.55,421.16l84.26-22.57"></path>
+  <path class="st3 svg-elem-8" d="M424.02,332.93l-29.14,149.6c-0.33,1.68-1.99,2.75-3.66,2.34l-1.69-0.41l-2.69,22.42l-11.64,13.51l-4.11-17.35
+    l7.94-21.14l-1.69-0.41c-1.66-0.41-2.65-2.12-2.17-3.76l43.01-146.22C419.27,327.84,424.75,329.18,424.02,332.93z M375.21,520.39
+    l3.99-16.37"></path>
+</svg>

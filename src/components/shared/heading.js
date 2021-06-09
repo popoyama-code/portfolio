@@ -15,7 +15,7 @@ const StyledHeading = styled.div(props => `
   line-height: ${props.lineHeight || 1};
   margin: ${props.margin || 0};
   padding: ${props.padding || 0};
-  transform: ${props.transform || null};
+  transform: ${props.transform || ""};
   z-index: 1000;
 `)
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import properties from '../_settings/_properties'
 
 const Section = ({children, ...props}) => {
   let skewStyle = null
@@ -45,7 +44,7 @@ const StyledSection = styled.section(props => `
   display: inline-block;
   height: ${props.styleHeight || "100%"};
   margin: ${props.margin || 0};
-  padding: ${props.padding || 0};
+  padding: ${props.padding || "5rem 2rem"};
   width: ${props.styleWidth || "100%"};
   ${props.skewStyle || ""}
 `)

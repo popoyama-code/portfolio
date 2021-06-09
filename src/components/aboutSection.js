@@ -7,9 +7,9 @@ import properties from './_settings/_properties'
 
 const AboutSection = ({children}) => {
   return (
-    <Section padding="5rem 0">
+    <Section>
       <StyledAboutWrap>
-        <Heading margin="0 0 3rem">ABOUT</Heading>
+        <Heading level={2} margin="0 0 3rem">ABOUT</Heading>
         <StyledText className="gs_reveal">
           首都圏の開発会社に勤めるWebエンジニアです。主にECサイトやWordPressサイトの受託開発に携わっています。<br />
           フロントエンド、バックエンド、サーバーサイドまで幅広い業務を担当。Web開発を通じて、お客様や、開発メンバー、<br />
@@ -17,14 +17,13 @@ const AboutSection = ({children}) => {
         </StyledText>
         <StyledText className="gs_reveal">
           スキル<br />
-          HTML/CSS/Sass/SCSS/StyledComponents/BEM/AtomicDesign/GSAP/Javascript/React.js/Gatsby/jQuery/PHP/MySQL/WordPress/<br />
-          Laravel/Ethna
+          HTML / CSS / Sass / SCSS / StyledComponents / BEM / AtomicDesign / GSAP / Javascript / React.js / Gatsby / jQuery / PHP / MySQL / WordPress / Laravel / Ethna
         </StyledText>
         <StyledText className="gs_reveal">
           開発環境<br />
-          VS Code/PHP Storm/Photoshop/Illustrator/<br />
-          Git/Node.js/Gulp/Docker/Apache/FTP/Ubuntu/CentOS/Windows/MacOS/<br />
-          Slack/Zoom/Backlog
+          VS Code / PHP Storm / Photoshop / Illustrator / 
+          Git / Node.js / Gulp / Docker / Apache / FTP / Ubuntu / CentOS / Windows / MacOS / 
+          Slack / Zoom / Backlog
         </StyledText>
       </StyledAboutWrap>
     </Section>
@@ -38,7 +37,7 @@ const StyledAboutWrap = styled.div(props => `
 
 const StyledText = styled.p(props => `
   font-size: ${properties.FONT.SIZE_S};
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 `)
 
  export default AboutSection

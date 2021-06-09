@@ -10,7 +10,7 @@ import ContactSection from "../components/contactSection"
 import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 const Index = props => {
   React.useEffect(() => {
@@ -47,6 +47,12 @@ const Index = props => {
         onEnter: function() { animateFrom(elem) }, 
         onEnterBack: function() { animateFrom(elem) },
         onLeave: function() { hide(elem) }
+      })
+    })
+    gsap.utils.toArray(".svg_reveal").forEach(function(elem) {
+      ScrollTrigger.create({
+        trigger: elem,
+        onEnter: function() { elem.style.animationPlayState = "running"; }
       })
     })
 

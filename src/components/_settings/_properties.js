@@ -19,7 +19,7 @@ const theme_color = {
 const font = {
   SIZE_S: "1.5rem",
   SIZE_M: "2rem",
-  SIZE_L: "5rem",
+  SIZE_L: "4rem",
 }
 
 // 汎用ボタン設定
@@ -29,11 +29,16 @@ const button = {
   SIZE_L: "2rem 6rem",
 }
 
+const media = {
+  NOT_SP: "min-width: 769px",
+}
+
 const properties = {
   COLOR: color,
   THEME_COLOR: theme_color,
   FONT: font,
   BUTTON: button,
+  MEDIA: media,
 }
 
 export default properties

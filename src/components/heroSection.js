@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from 'styled-components' 
-import Heading from './shared/heading'
 import BgImage from '../images/herob.jpg'
 import ArrowImg from '../images/arrow.svg'
 
@@ -12,14 +11,14 @@ const HeroSection = ({children, ...props}) => {
       <StyledHeroWrap>
         <StyledStripe />
         <StyledHeadingWrap>
-          <Heading fontColor={properties.COLOR.WHITE} fontSize="7rem">Shuya Oyama</Heading>
-          <Heading fontColor={properties.COLOR.WHITE} fontSize="3rem">Web Engineer</Heading>
+          <StyledHeadingPrimary fontColor={properties.COLOR.WHITE}>Shuya Oyama</StyledHeadingPrimary>
+          <StyledHeadinSecondary fontColor={properties.COLOR.WHITE}>Web Engineer</StyledHeadinSecondary>
         </StyledHeadingWrap>
       </StyledHeroWrap>
       <StyledArrowWrap>
         <StyledSGuideSign>
           <p>SCROLL</p>
-          <img src={ArrowImg} />
+          <img src={ArrowImg} alt="scroll" />
         </StyledSGuideSign>
       </StyledArrowWrap>
     </StyledHeroSection>
@@ -37,7 +36,6 @@ const StyledHeroWrap = styled.div(props => `
   height: 80%;
   justify-content: center;
   max-height: 800px;
-  min-height: 640px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -69,6 +67,22 @@ const StyledHeadingWrap = styled.div(props => `
   gap: 2rem;
   align-items: center;
   justify-content: center;
+`)
+
+const StyledHeadingPrimary = styled.h1(props => `
+  color: ${properties.COLOR.WHITE};
+  font-size: 3rem;
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    font-size: 7rem;
+  }
+`)
+
+const StyledHeadinSecondary = styled.h1(props => `
+  color: ${properties.COLOR.WHITE};
+  font-size: 2rem;
+  @media screen and (${properties.MEDIA.NOT_SP}) {
+    font-size: 3rem;
+  }
 `)
 
 const StyledArrowWrap = styled.div(props => `
