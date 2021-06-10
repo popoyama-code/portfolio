@@ -35,7 +35,6 @@ const StyledHeroWrap = styled.div(props => `
   flex-direction: column;
   height: 80%;
   justify-content: center;
-  max-height: 800px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -44,6 +43,7 @@ const StyledHeroWrap = styled.div(props => `
 
 const StyledHeroSection = styled.section(props => `
   height: 100vh;
+  max-height: 1000px;
 `)
 
 const StyledStripe = styled.div(props => `

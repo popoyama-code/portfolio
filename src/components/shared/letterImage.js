@@ -105,7 +105,7 @@ const StyledImageWrap = styled.div(props => `
       fill: transparent;
     }
     to {
-      fill: #75adde;
+      fill: ${properties.COLOR.BLUE_LIGHT};
     }
   }
 

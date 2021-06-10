@@ -137,7 +137,7 @@ const StyledCardThumbnailWrap = styled.div(props => `
 const StyledCardThumbnailCaption = styled.div(props => `
   align-items: center;
   background-color: ${properties.COLOR.WHITE};
-  color: #4A8FE7;
+  color: ${properties.THEME_COLOR.MAIN};
   display: flex;
   font-size: ${properties.FONT.SIZE_S};
   justify-content: center;

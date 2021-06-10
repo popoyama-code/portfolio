@@ -9,7 +9,7 @@ const Heading = ({children, level=1, ...props}) => {
 }
 
 const StyledHeading = styled.div(props => `
-  color: ${props.fontColor || "#333"};
+  color: ${props.fontColor || properties.COLOR.BLACK};
   display: block;
   font-size: ${props.fontSize || properties.FONT.SIZE_L};
   line-height: ${props.lineHeight || 1};

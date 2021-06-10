@@ -24,11 +24,23 @@ const ContactSection = ({children, ...props}) => {
                 <Honeypot />
                 <StyledInputWrap>
                   <StyledLabel htmlFor='name'>お名前</StyledLabel>
-                  <StyledTextbox type='text' name='name' id='name' onChange={handleChange} required />
+                  <StyledTextbox
+                   type='text' 
+                   name='name' 
+                   id='name' 
+                   onChange={handleChange} 
+                   required 
+                  />
                 </StyledInputWrap>
                 <StyledInputWrap>
                   <StyledLabel htmlFor='email'>ご連絡先メールアドレス</StyledLabel>
-                  <StyledTextbox type='email' name='email' id='email' onChange={handleChange} required />
+                  <StyledTextbox
+                   type='email'
+                    name='email'
+                    id='email'
+                    onChange={handleChange}
+                    required
+                  />
                 </StyledInputWrap>
                 <StyledInputWrap>
                   <StyledLabel htmlFor='message'>本文</StyledLabel>
@@ -82,8 +94,8 @@ const StyledText = styled.p(props => `
 `)
 
 const StyledTextbox = styled.input(props => `
-  background-color: #f7f9f9;
-  border:solid #d1d3d3;
+  background-color: ${properties.COLOR.GRAY_LIGHT};
+  border:solid ${properties.COLOR.GRAY};
   border-radius: 0;
   border-width: 0 0 3px 0;
   display: block;
@@ -93,8 +105,8 @@ const StyledTextbox = styled.input(props => `
 `)
 
 const StyledTextarea = styled.textarea(props => `
-  background-color: #f7f9f9;
-  border:solid #d1d3d3;
+  background-color: ${properties.COLOR.GRAY_LIGHT};
+  border:solid ${properties.COLOR.GRAY};
   border-radius: 0;
   border-width: 0 0 3px 0;
   display: block;
@@ -108,15 +120,15 @@ const StyledInputWrap = styled.div(props => `
 `)
 
 const StyledButton = styled.button(props => `
-  background-color: #4A8FE7;
+  background-color: ${properties.THEME_COLOR.MAIN};
   border: none;
   color: ${properties.COLOR.WHITE};
   cursor: pointer;
   font-size: ${properties.FONT.SIZE_S};
-  padding: 1rem 3rem;
+  padding: ${properties.BUTTON.SIZE_M};
   transition: all .3s;
   :hover {
-    background-color: #72A7E9;
+    background-color: ${properties.COLOR.BLUE_DARK};
   }
 `)
 

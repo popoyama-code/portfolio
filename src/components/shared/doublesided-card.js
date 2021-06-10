@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 
+import properties from '../_settings/_properties'
+
 const DoubleSidedCard = ({children, ...props}) => {
   const [isBackside, setIsBackside] = useState(false)
   let animName0, animName1
@@ -29,7 +31,7 @@ const DoubleSidedCard = ({children, ...props}) => {
 const StyledDoubleSidedCardInner = styled.div(props => `
   animation: ${props.animDuration || .5}s linear 0s 1 normal forwards running ${props.animName};
   backface-visibility: hidden;
-  background: ${props.background || "#fff"};
+  background: ${props.background || properties.COLOR.WHITE};
   border: solid 1px #d1d3d3;
   height: 100%;
   overflow: hidden;

@@ -15,15 +15,13 @@ const AboutSection = ({children}) => {
           フロントエンド、バックエンド、サーバーサイドまで幅広い業務を担当。Web開発を通じて、お客様や、開発メンバー、<br />
           そして社会に貢献し続けられるよう日々努めています。
         </StyledText>
+        <Heading fontSize={properties.FONT.SIZE_M} level={3} margin="0 0 .5rem" className="gs_reveal">スキル</Heading>
         <StyledText className="gs_reveal">
-          スキル<br />
           HTML / CSS / Sass / SCSS / StyledComponents / BEM / AtomicDesign / GSAP / Javascript / React.js / Gatsby / jQuery / PHP / MySQL / WordPress / Laravel / Ethna
         </StyledText>
+        <Heading fontSize={properties.FONT.SIZE_M} level={3} margin="0 0 .5rem" className="gs_reveal">開発環境</Heading>
         <StyledText className="gs_reveal">
-          開発環境<br />
-          VS Code / PHP Storm / Photoshop / Illustrator / 
-          Git / Node.js / Gulp / Docker / Apache / FTP / Ubuntu / CentOS / Windows / MacOS / 
-          Slack / Zoom / Backlog
+          VS Code / PHP Storm / Photoshop / Illustrator /  Git / Node.js / Gulp / Docker / Apache / FTP / Ubuntu / CentOS / Windows / MacOS / Slack / Zoom / Backlog
         </StyledText>
       </StyledAboutWrap>
     </Section>

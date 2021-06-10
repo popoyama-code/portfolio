@@ -42,7 +42,6 @@ const Layout = ({ children }) => {
 }
 
 const StyledCursor = styled.div(props => `
-  background: #333;
   border-radius: 50%;
   display: none;
   height: 10px;

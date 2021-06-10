@@ -2,17 +2,18 @@
 const color = {
   BLACK: "#333",
   WHITE: "#fff",
-  GRAY: "#e1e2e1",
-  GRAY_LIGHT: "#f5f5f5",
+  GRAY: "#d1d3d3",
+  GRAY_LIGHT: "#f7f9f9",
   GRAY_DARK: "#b7b7b7",
-  RED: "#d50000",
+  BLUE: "#4A8FE7",
+  BLUE_LIGHT: "#C7EBF0",
+  BLUE_DARK: "#72A7E9",
 }
 
 // アプリテーマ色
-const theme_color = {
-  BASE: color.GRAY_LIGHT,
-  MAIN: color.GRAY_LIGHT,
-  ACCENT: color.RED,
+const themeColor = {
+  BASE: color.WHITE,
+  MAIN: color.BLUE,
 }
 
 // 汎用フォント設定
@@ -35,7 +36,7 @@ const media = {
 
 const properties = {
   COLOR: color,
-  THEME_COLOR: theme_color,
+  THEME_COLOR: themeColor,
   FONT: font,
   BUTTON: button,
   MEDIA: media,
