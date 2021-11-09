@@ -11,7 +11,7 @@ const HeroSection = ({children, ...props}) => {
       <StyledHeroWrap>
         <StyledStripe />
         <StyledHeadingWrap>
-          <StyledHeadingPrimary fontColor={properties.COLOR.WHITE}>Shuya Oyama</StyledHeadingPrimary>
+          <StyledHeadingPrimary fontColor={properties.COLOR.WHITE}>Shunya Oyama</StyledHeadingPrimary>
           <StyledHeadinSecondary fontColor={properties.COLOR.WHITE}>Web Engineer</StyledHeadinSecondary>
         </StyledHeadingWrap>
       </StyledHeroWrap>
